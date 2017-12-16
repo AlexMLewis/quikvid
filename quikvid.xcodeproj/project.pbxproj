@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
+		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
+		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
+		CFC570B91FE5AC8100FFFC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570B81FE5AC8100FFFC19 /* ViewController.swift */; };
+		CFC570BD1FE5AC8C00FFFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */; };
+		CFC570C11FE5AC9800FFFC19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */; };
+		CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570C51FE5AF0200FFFC19 /* Login.storyboard */; };
+		CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570C71FE5B08100FFFC19 /* LoginViewController.swift */; };
+		CFC570CD1FE5C54800FFFC19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570CC1FE5C54800FFFC19 /* Main.storyboard */; };
+		CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570CE1FE5C55800FFFC19 /* User.swift */; };
+		CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */; };
+		CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570D51FE5D29100FFFC19 /* UserService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16F5639C91983C8B98373C15 /* Pods_quikvid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quikvid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E058630ADAEBD32EF6CD42 /* Pods-quikvid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.release.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.release.xcconfig"; sourceTree = "<group>"; };
+		989858CC7CAEA85A7F696346 /* Pods-quikvid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.debug.xcconfig"; sourceTree = "<group>"; };
+		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFC570B81FE5AC8100FFFC19 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFC570BE1FE5AC9700FFFC19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFC570C51FE5AF0200FFFC19 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Login.storyboard; path = quikvid/Storyboards/Login.storyboard; sourceTree = SOURCE_ROOT; };
+		CFC570C71FE5B08100FFFC19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CFC570CC1FE5C54800FFFC19 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = quikvid/Storyboards/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		CFC570CE1FE5C55800FFFC19 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = quikvid/Models/User.swift; sourceTree = SOURCE_ROOT; };
+		CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		CFC570D51FE5D29100FFFC19 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = quikvid/Services/UserService.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF344DA21FE5AB410068AD3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E043328F89869DD2E0FB5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				989858CC7CAEA85A7F696346 /* Pods-quikvid.debug.xcconfig */,
+				74E058630ADAEBD32EF6CD42 /* Pods-quikvid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		17154DD81A5A762BB158DD92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16F5639C91983C8B98373C15 /* Pods_quikvid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF344D9C1FE5AB410068AD3C = {
+			isa = PBXGroup;
+			children = (
+				CF344DA71FE5AB410068AD3C /* quikvid */,
+				CF344DA61FE5AB410068AD3C /* Products */,
+				00E043328F89869DD2E0FB5B /* Pods */,
+				17154DD81A5A762BB158DD92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CF344DA61FE5AB410068AD3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF344DA51FE5AB410068AD3C /* quikvid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF344DA71FE5AB410068AD3C /* quikvid */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570C21FE5ADD000FFFC19 /* Supporting Files */,
+				CFC570C31FE5ADE300FFFC19 /* Storyboards */,
+				CFC570C41FE5ADFB00FFFC19 /* View Controllers */,
+				CF344DA81FE5AB410068AD3C /* AppDelegate.swift */,
+				CF344DAF1FE5AB410068AD3C /* Assets.xcassets */,
+				CFC570CB1FE5C4E900FFFC19 /* Models */,
+				CFC570D41FE5D27100FFFC19 /* Services */,
+			);
+			path = quikvid;
+			sourceTree = "<group>";
+		};
+		CFC570C21FE5ADD000FFFC19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */,
+				CFC570BE1FE5AC9700FFFC19 /* Info.plist */,
+				CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFC570C31FE5ADE300FFFC19 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570CC1FE5C54800FFFC19 /* Main.storyboard */,
+				CFC570C51FE5AF0200FFFC19 /* Login.storyboard */,
+			);
+			name = Storyboards;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CFC570C41FE5ADFB00FFFC19 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570B81FE5AC8100FFFC19 /* ViewController.swift */,
+				CFC570C71FE5B08100FFFC19 /* LoginViewController.swift */,
+				CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CFC570CB1FE5C4E900FFFC19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570CE1FE5C55800FFFC19 /* User.swift */,
+			);
+			name = Models;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		CFC570D41FE5D27100FFFC19 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570D51FE5D29100FFFC19 /* UserService.swift */,
+			);
+			name = Services;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF344DA41FE5AB410068AD3C /* quikvid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF344DB71FE5AB410068AD3C /* Build configuration list for PBXNativeTarget "quikvid" */;
+			buildPhases = (
+				75AB22CAFBB4494044D99181 /* [CP] Check Pods Manifest.lock */,
+				CF344DA11FE5AB410068AD3C /* Sources */,
+				CF344DA21FE5AB410068AD3C /* Frameworks */,
+				CF344DA31FE5AB410068AD3C /* Resources */,
+				CC1C42185A79943B6CEC91C7 /* [CP] Embed Pods Frameworks */,
+				318E1B511E0C5446F4FA5701 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quikvid;
+			productName = quikvid;
+			productReference = CF344DA51FE5AB410068AD3C /* quikvid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF344D9D1FE5AB410068AD3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alexander Lewis";
+				TargetAttributes = {
+					CF344DA41FE5AB410068AD3C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CF344DA01FE5AB410068AD3C /* Build configuration list for PBXProject "quikvid" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF344D9C1FE5AB410068AD3C;
+			productRefGroup = CF344DA61FE5AB410068AD3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF344DA41FE5AB410068AD3C /* quikvid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF344DA31FE5AB410068AD3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC570BD1FE5AC8C00FFFC19 /* LaunchScreen.storyboard in Resources */,
+				CFC570CD1FE5C54800FFFC19 /* Main.storyboard in Resources */,
+				CFC570C11FE5AC9800FFFC19 /* GoogleService-Info.plist in Resources */,
+				CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */,
+				CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		318E1B511E0C5446F4FA5701 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-quikvid/Pods-quikvid-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quikvid/Pods-quikvid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75AB22CAFBB4494044D99181 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quikvid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1C42185A79943B6CEC91C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-quikvid/Pods-quikvid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quikvid/Pods-quikvid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF344DA11FE5AB410068AD3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */,
+				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
+				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
+				CFC570B91FE5AC8100FFFC19 /* ViewController.swift in Sources */,
+				CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */,
+				CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CF344DB51FE5AB410068AD3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF344DB61FE5AB410068AD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF344DB81FE5AB410068AD3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 989858CC7CAEA85A7F696346 /* Pods-quikvid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/quikvid/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexander-lewis.quikvid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF344DB91FE5AB410068AD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E058630ADAEBD32EF6CD42 /* Pods-quikvid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/quikvid/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alexander-lewis.quikvid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF344DA01FE5AB410068AD3C /* Build configuration list for PBXProject "quikvid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF344DB51FE5AB410068AD3C /* Debug */,
+				CF344DB61FE5AB410068AD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF344DB71FE5AB410068AD3C /* Build configuration list for PBXNativeTarget "quikvid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF344DB81FE5AB410068AD3C /* Debug */,
+				CF344DB91FE5AB410068AD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF344D9D1FE5AB410068AD3C /* Project object */;
+}
