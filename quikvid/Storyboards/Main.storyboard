@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="31A-pj-CB3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="KaB-x1-Y5y">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tab_plus_black" id="KaB-x1-Y5y">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="rsp-zD-ts5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_find_friends_black" id="UDb-Bs-sed">
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="tab_find_friends_black" id="UDb-Bs-sed">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="199" y="-276"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="m6t-7d-9nU">
             <objects>
-                <tabBarController id="nda-qi-pga" sceneMemberID="viewController">
+                <tabBarController id="nda-qi-pga" customClass="MainTabBarController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4wP-79-Dou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

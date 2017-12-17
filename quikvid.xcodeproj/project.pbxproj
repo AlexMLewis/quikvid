@@ -22,6 +22,8 @@
 		CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */; };
 		CFC570E11FE6008500FFFC19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570E01FE6008500FFFC19 /* HomeViewController.swift */; };
 		CFC570E31FE6009200FFFC19 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */; };
+		CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570E71FE60CB500FFFC19 /* MainTabBarController.swift */; };
+		CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570EC1FE6141900FFFC19 /* QVPhotoHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "quikvid/Extensions/Storyboard+Utility.swift"; sourceTree = SOURCE_ROOT; };
 		CFC570E01FE6008500FFFC19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
+		CFC570E71FE60CB500FFFC19 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = quikvid/Controllers/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
+		CFC570EC1FE6141900FFFC19 /* QVPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QVPhotoHelper.swift; path = quikvid/Helpers/QVPhotoHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				CFC570CB1FE5C4E900FFFC19 /* Models */,
 				CFC570D41FE5D27100FFFC19 /* Services */,
 				CFC570DD1FE5F97200FFFC19 /* Extensions */,
+				CFC570E61FE60C8C00FFFC19 /* Controllers */,
+				CFC570EB1FE613E700FFFC19 /* Helpers */,
 			);
 			path = quikvid;
 			sourceTree = "<group>";
@@ -164,6 +170,24 @@
 				CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */,
 			);
 			name = Extensions;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CFC570E61FE60C8C00FFFC19 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570E71FE60CB500FFFC19 /* MainTabBarController.swift */,
+			);
+			name = Controllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CFC570EB1FE613E700FFFC19 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570EC1FE6141900FFFC19 /* QVPhotoHelper.swift */,
+			);
+			name = Helpers;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -309,8 +333,10 @@
 			files = (
 				CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */,
 				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
+				CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
 				CFC570E11FE6008500FFFC19 /* HomeViewController.swift in Sources */,
+				CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */,
 				CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */,
 				CFC570E31FE6009200FFFC19 /* FindFriendsViewController.swift in Sources */,
 				CFC570DA1FE5F7C000FFFC19 /* Constants.swift in Sources */,
