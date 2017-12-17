@@ -16,18 +16,21 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     // MARK: - Properties
-    
+    // Create an instance of the QVPhotoHelper object
     let photoHelper = QVPhotoHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the completionHandler property of QVPhotoHelper
+        // Whenever QVPhotoHelper receives an image, it will call this closure
         photoHelper.completionHandler = { image in
             print("handle image")
         }
         
         // Set MainTabBarController as the delegate of its tab bar
         delegate = self
+        
         // Set the tab bar's unselectedItemTintColor from the default of gray to black
         tabBar.unselectedItemTintColor = .black
     }
@@ -42,6 +45,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
         // Photo taking tab is tagged 1
         // If the view controllers tag is the photo taking tag, return false
         if viewController.tabBarItem.tag == 1 {
+            
             // present photo taking action sheet
             photoHelper.presentActionSheet(from: self)
             return false
