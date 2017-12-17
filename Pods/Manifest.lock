@@ -44,6 +44,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.12)
+  - Kingfisher (4.5.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FirebaseUI/Auth
+  - Kingfisher (~> 4.0)
 
 SPEC CHECKSUMS:
   Firebase: dbfb98ccec2dcfcd21ab9cc1b4981a3f3c8c5e26
@@ -69,9 +71,10 @@ SPEC CHECKSUMS:
   FirebaseUI: 883482fea73b73bbb488c55176f4c6ad128957eb
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: bae6e1eb27497aaa715d8c70791a60f43cbc2000
+PODFILE CHECKSUM: 6ea6dbce725c6820f016c77a33fd53e9e83a1c7c
 
 COCOAPODS: 1.3.1

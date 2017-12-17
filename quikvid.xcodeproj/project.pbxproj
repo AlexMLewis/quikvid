@@ -10,6 +10,7 @@
 		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
+		CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */; };
 		CFC570BD1FE5AC8C00FFFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */; };
 		CFC570C11FE5AC9800FFFC19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */; };
 		CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570C51FE5AF0200FFFC19 /* Login.storyboard */; };
@@ -24,6 +25,12 @@
 		CFC570E31FE6009200FFFC19 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */; };
 		CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570E71FE60CB500FFFC19 /* MainTabBarController.swift */; };
 		CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570EC1FE6141900FFFC19 /* QVPhotoHelper.swift */; };
+		CFC570EF1FE6C10800FFFC19 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570EE1FE6C10800FFFC19 /* StorageService.swift */; };
+		CFC570F11FE6C25A00FFFC19 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570F01FE6C25A00FFFC19 /* PostService.swift */; };
+		CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570F41FE6C5CE00FFFC19 /* Post.swift */; };
+		CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570F61FE6C94400FFFC19 /* UIImage+Size.swift */; };
+		CFC570F91FE6CEED00FFFC19 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */; };
+		CFC570FB1FE6D09E00FFFC19 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570FA1FE6D09E00FFFC19 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,7 @@
 		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = quikvid/Views/PostImageCell.swift; sourceTree = SOURCE_ROOT; };
 		CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFC570BE1FE5AC9700FFFC19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -48,6 +56,12 @@
 		CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		CFC570E71FE60CB500FFFC19 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = quikvid/Controllers/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		CFC570EC1FE6141900FFFC19 /* QVPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QVPhotoHelper.swift; path = quikvid/Helpers/QVPhotoHelper.swift; sourceTree = SOURCE_ROOT; };
+		CFC570EE1FE6C10800FFFC19 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = quikvid/Services/StorageService.swift; sourceTree = SOURCE_ROOT; };
+		CFC570F01FE6C25A00FFFC19 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = quikvid/Services/PostService.swift; sourceTree = SOURCE_ROOT; };
+		CFC570F41FE6C5CE00FFFC19 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = quikvid/Models/Post.swift; sourceTree = SOURCE_ROOT; };
+		CFC570F61FE6C94400FFFC19 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "quikvid/Extensions/UIImage+Size.swift"; sourceTree = SOURCE_ROOT; };
+		CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "quikvid/Extensions/StorageReference+Post.swift"; sourceTree = SOURCE_ROOT; };
+		CFC570FA1FE6D09E00FFFC19 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = quikvid/Storyboards/Home.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +124,18 @@
 				CFC570DD1FE5F97200FFFC19 /* Extensions */,
 				CFC570E61FE60C8C00FFFC19 /* Controllers */,
 				CFC570EB1FE613E700FFFC19 /* Helpers */,
+				CF4FFCC11FE6DF2D00CD6B0D /* Views */,
 			);
 			path = quikvid;
+			sourceTree = "<group>";
+		};
+		CF4FFCC11FE6DF2D00CD6B0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */,
+			);
+			name = Views;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CFC570C21FE5ADD000FFFC19 /* Supporting Files */ = {
@@ -129,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC570CC1FE5C54800FFFC19 /* Main.storyboard */,
+				CFC570FA1FE6D09E00FFFC19 /* Home.storyboard */,
 				CFC570C51FE5AF0200FFFC19 /* Login.storyboard */,
 			);
 			name = Storyboards;
@@ -149,6 +174,7 @@
 		CFC570CB1FE5C4E900FFFC19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CFC570F41FE6C5CE00FFFC19 /* Post.swift */,
 				CFC570CE1FE5C55800FFFC19 /* User.swift */,
 			);
 			name = Models;
@@ -159,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				CFC570D51FE5D29100FFFC19 /* UserService.swift */,
+				CFC570EE1FE6C10800FFFC19 /* StorageService.swift */,
+				CFC570F01FE6C25A00FFFC19 /* PostService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -168,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */,
+				CFC570F61FE6C94400FFFC19 /* UIImage+Size.swift */,
+				CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			path = "New Group";
@@ -256,6 +286,7 @@
 				CFC570BD1FE5AC8C00FFFC19 /* LaunchScreen.storyboard in Resources */,
 				CFC570CD1FE5C54800FFFC19 /* Main.storyboard in Resources */,
 				CFC570C11FE5AC9800FFFC19 /* GoogleService-Info.plist in Resources */,
+				CFC570FB1FE6D09E00FFFC19 /* Home.storyboard in Resources */,
 				CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */,
 				CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */,
 			);
@@ -309,6 +340,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-quikvid/Pods-quikvid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -316,6 +348,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -332,14 +365,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */,
+				CFC570EF1FE6C10800FFFC19 /* StorageService.swift in Sources */,
 				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
 				CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
+				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
+				CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */,
+				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,
 				CFC570E11FE6008500FFFC19 /* HomeViewController.swift in Sources */,
 				CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */,
 				CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */,
 				CFC570E31FE6009200FFFC19 /* FindFriendsViewController.swift in Sources */,
+				CFC570F91FE6CEED00FFFC19 /* StorageReference+Post.swift in Sources */,
 				CFC570DA1FE5F7C000FFFC19 /* Constants.swift in Sources */,
+				CFC570F11FE6C25A00FFFC19 /* PostService.swift in Sources */,
 				CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */,
 				CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */,
 			);

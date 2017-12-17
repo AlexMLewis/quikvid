@@ -25,7 +25,7 @@ class MainTabBarController: UITabBarController {
         // Set the completionHandler property of QVPhotoHelper
         // Whenever QVPhotoHelper receives an image, it will call this closure
         photoHelper.completionHandler = { image in
-            print("handle image")
+            PostService.create(for: image)
         }
         
         // Set MainTabBarController as the delegate of its tab bar
