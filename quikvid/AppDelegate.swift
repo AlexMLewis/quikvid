@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        // Call extension function below
         configureInitialRootViewController(for: window)
         
         return true
@@ -49,18 +50,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// Determine which storyboard's initial view controller should be set as the rootViewController of the window
 extension AppDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {
         let defaults = UserDefaults.standard
         let initialViewController: UIViewController
         
+        // If the FIRUser singleton already exists and we unarchive data from the currentUser key
+        // from UserDefaults, we know the user has previously been authenticated on the current device
         if Auth.auth().currentUser != nil,
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
             let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
             
             User.setCurrent(user)
+            
+            // skip login flow, go right to main storyboard
             initialViewController = UIStoryboard.initialViewController(for: .main)
         } else {
+            // otherwise do login flow
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }
         

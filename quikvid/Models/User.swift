@@ -5,10 +5,13 @@
 //  Created by Alexander Lewis on 12/16/17.
 //  Copyright © 2017 Alexander Lewis. All rights reserved.
 //
+//  Persists authentication using UserDefaults to store User singleton between sessions
+//  Uses NSKeyedArchiver to convert our class from type User to Data type
 
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
+// Adds the NSObject superclass to User class
 class User: NSObject {
     
     // MARK: - Properties
@@ -18,6 +21,8 @@ class User: NSObject {
     
     // MARK: - Init
     
+    // Initializer to allow users to be decoded from data
+    // Required to conform to the NSCoding protocol
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
@@ -63,6 +68,7 @@ class User: NSObject {
     
     class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
         
+        // if writeToUserDefaults is true, write the user object to UserDefaults
         if writeToUserDefaults {
             let data = NSKeyedArchiver.archivedData(withRootObject: user)
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
@@ -72,6 +78,7 @@ class User: NSObject {
     }
 }
 
+// Implement NSCoding protocol to the user object can properly be encoded as Data
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)

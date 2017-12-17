@@ -31,6 +31,7 @@ class CreateUsernameViewController: UIViewController {
                 return
             }
             
+            // store user in UserDefaults
             User.setCurrent(user, writeToUserDefaults: true)
             
             let initialViewController = UIStoryboard.initialViewController(for: .main)
