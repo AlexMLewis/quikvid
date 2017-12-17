@@ -26,6 +26,7 @@ class CreateUsernameViewController: UIViewController {
             let username = usernameTextField.text,
             !username.isEmpty else { return }
         
+        // when user is created, create user JSON object for them in the database
         UserService.create(firUser, username: username) { (user) in
             guard let user = user else {
                 return
@@ -34,8 +35,8 @@ class CreateUsernameViewController: UIViewController {
             // store user in UserDefaults
             User.setCurrent(user, writeToUserDefaults: true)
             
+            // after user is logged in, change root view controller back to the main storyboard
             let initialViewController = UIStoryboard.initialViewController(for: .main)
-            
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
             
