@@ -19,6 +19,8 @@
 		CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570CE1FE5C55800FFFC19 /* User.swift */; };
 		CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */; };
 		CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570D51FE5D29100FFFC19 /* UserService.swift */; };
+		CFC570DA1FE5F7C000FFFC19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570D91FE5F7C000FFFC19 /* Constants.swift */; };
+		CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CFC570CE1FE5C55800FFFC19 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = quikvid/Models/User.swift; sourceTree = SOURCE_ROOT; };
 		CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		CFC570D51FE5D29100FFFC19 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = quikvid/Services/UserService.swift; sourceTree = SOURCE_ROOT; };
+		CFC570D91FE5F7C000FFFC19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "quikvid/Extensions/Storyboard+Utility.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				CF344DAF1FE5AB410068AD3C /* Assets.xcassets */,
 				CFC570CB1FE5C4E900FFFC19 /* Models */,
 				CFC570D41FE5D27100FFFC19 /* Services */,
+				CFC570DD1FE5F97200FFFC19 /* Extensions */,
 			);
 			path = quikvid;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */,
 				CFC570BE1FE5AC9700FFFC19 /* Info.plist */,
 				CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */,
+				CFC570D91FE5F7C000FFFC19 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,6 +152,15 @@
 				CFC570D51FE5D29100FFFC19 /* UserService.swift */,
 			);
 			name = Services;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CFC570DD1FE5F97200FFFC19 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */,
+			);
+			name = Extensions;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -292,7 +307,9 @@
 				CFC570CF1FE5C55800FFFC19 /* User.swift in Sources */,
 				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
+				CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */,
 				CFC570B91FE5AC8100FFFC19 /* ViewController.swift in Sources */,
+				CFC570DA1FE5F7C000FFFC19 /* Constants.swift in Sources */,
 				CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */,
 				CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */,
 			);
