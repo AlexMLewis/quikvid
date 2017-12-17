@@ -11,6 +11,8 @@
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
 		CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */; };
+		CF5E24E71FE6F6A6007C6596 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E24E61FE6F6A6007C6596 /* PostHeaderCell.swift */; };
+		CF5E24E91FE6F6BA007C6596 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E24E81FE6F6BA007C6596 /* PostActionCell.swift */; };
 		CFC570BD1FE5AC8C00FFFC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */; };
 		CFC570C11FE5AC9800FFFC19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */; };
 		CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC570C51FE5AF0200FFFC19 /* Login.storyboard */; };
@@ -41,6 +43,8 @@
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = quikvid/Views/PostImageCell.swift; sourceTree = SOURCE_ROOT; };
+		CF5E24E61FE6F6A6007C6596 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = quikvid/Views/PostHeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		CF5E24E81FE6F6BA007C6596 /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = quikvid/Views/PostActionCell.swift; sourceTree = SOURCE_ROOT; };
 		CFC570BB1FE5AC8C00FFFC19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFC570BE1FE5AC9700FFFC19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC570BF1FE5AC9700FFFC19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -132,7 +136,9 @@
 		CF4FFCC11FE6DF2D00CD6B0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF5E24E61FE6F6A6007C6596 /* PostHeaderCell.swift */,
 				CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */,
+				CF5E24E81FE6F6BA007C6596 /* PostActionCell.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -369,6 +375,7 @@
 				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
 				CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
+				CF5E24E91FE6F6BA007C6596 /* PostActionCell.swift in Sources */,
 				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
 				CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */,
 				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,
@@ -380,6 +387,7 @@
 				CFC570DA1FE5F7C000FFFC19 /* Constants.swift in Sources */,
 				CFC570F11FE6C25A00FFFC19 /* PostService.swift in Sources */,
 				CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */,
+				CF5E24E71FE6F6A6007C6596 /* PostHeaderCell.swift in Sources */,
 				CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
