@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B79624DC1FEF0622003C617F /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DB1FEF0622003C617F /* FollowService.swift */; };
 		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		16F5639C91983C8B98373C15 /* Pods_quikvid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quikvid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E058630ADAEBD32EF6CD42 /* Pods-quikvid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.release.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.release.xcconfig"; sourceTree = "<group>"; };
 		989858CC7CAEA85A7F696346 /* Pods-quikvid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.debug.xcconfig"; sourceTree = "<group>"; };
+		B79624DB1FEF0622003C617F /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = quikvid/Services/FollowService.swift; sourceTree = SOURCE_ROOT; };
 		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				CFC570D51FE5D29100FFFC19 /* UserService.swift */,
 				CFC570EE1FE6C10800FFFC19 /* StorageService.swift */,
 				CFC570F01FE6C25A00FFFC19 /* PostService.swift */,
+				B79624DB1FEF0622003C617F /* FollowService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -376,6 +379,7 @@
 				CFC570E81FE60CB500FFFC19 /* MainTabBarController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
 				CF5E24E91FE6F6BA007C6596 /* PostActionCell.swift in Sources */,
+				B79624DC1FEF0622003C617F /* FollowService.swift in Sources */,
 				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
 				CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */,
 				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,
