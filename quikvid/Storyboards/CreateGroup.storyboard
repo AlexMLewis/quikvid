@@ -9,33 +9,85 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Create a Group-->
+        <!--Create Group View Controller-->
         <scene sceneID="NtB-Na-fEn">
             <objects>
                 <viewController id="phB-Ul-gdC" customClass="CreateGroupViewController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRd-CQ-9cH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Create a group name to begin adding friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HQ-1o-byW">
+                                <rect key="frame" x="10" y="183.5" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6C-oE-rRD">
+                                <rect key="frame" x="50" y="288" width="275" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4zA-NY-hRK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="group name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-IM-MeE">
+                                <rect key="frame" x="50" y="224" width="275" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5rv-dj-2sh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Create Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-nt-Ba2">
+                                <rect key="frame" x="80" y="120" width="215" height="43.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dx0-IM-MeE" firstAttribute="top" secondItem="6HQ-1o-byW" secondAttribute="bottom" constant="20" id="0vV-nU-dtE"/>
+                            <constraint firstItem="m6C-oE-rRD" firstAttribute="leading" secondItem="liF-ZA-qkr" secondAttribute="leading" constant="50" id="6q0-1K-ynq"/>
+                            <constraint firstItem="liF-ZA-qkr" firstAttribute="trailing" secondItem="dx0-IM-MeE" secondAttribute="trailing" constant="50" id="Bhw-Dz-1Yt"/>
+                            <constraint firstItem="hw6-nt-Ba2" firstAttribute="leading" secondItem="liF-ZA-qkr" secondAttribute="leading" constant="80" id="DvL-dl-yjY"/>
+                            <constraint firstItem="hw6-nt-Ba2" firstAttribute="top" secondItem="liF-ZA-qkr" secondAttribute="top" constant="100" id="E17-J8-UiV"/>
+                            <constraint firstItem="liF-ZA-qkr" firstAttribute="trailing" secondItem="6HQ-1o-byW" secondAttribute="trailing" constant="10" id="GTh-Ty-J6T"/>
+                            <constraint firstItem="6HQ-1o-byW" firstAttribute="leading" secondItem="liF-ZA-qkr" secondAttribute="leading" constant="10" id="HAX-op-Xhy"/>
+                            <constraint firstItem="liF-ZA-qkr" firstAttribute="trailing" secondItem="hw6-nt-Ba2" secondAttribute="trailing" constant="80" id="XIm-tR-HUN"/>
+                            <constraint firstItem="dx0-IM-MeE" firstAttribute="leading" secondItem="liF-ZA-qkr" secondAttribute="leading" constant="50" id="c8U-OY-dA4"/>
+                            <constraint firstItem="6HQ-1o-byW" firstAttribute="top" secondItem="hw6-nt-Ba2" secondAttribute="bottom" constant="20" id="hAF-61-JCb"/>
+                            <constraint firstItem="m6C-oE-rRD" firstAttribute="top" secondItem="dx0-IM-MeE" secondAttribute="bottom" constant="20" id="kbe-8c-o9a"/>
+                            <constraint firstItem="liF-ZA-qkr" firstAttribute="trailing" secondItem="m6C-oE-rRD" secondAttribute="trailing" constant="50" id="oV4-db-mte"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="liF-ZA-qkr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create a Group" id="oZ8-nm-ksT"/>
+                    <navigationItem key="navigationItem" id="oZ8-nm-ksT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yu0-7u-2mt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="746"/>
+            <point key="canvasLocation" x="1484" y="745.27736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AmS-nV-0cS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dfv-he-KaL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dfv-he-KaL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="" image="tab_group" id="fna-Fx-sNy">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oEF-Qb-8z3">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
