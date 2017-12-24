@@ -26,37 +26,30 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeaderCell" rowHeight="54" id="uWW-mY-6kk" customClass="PostHeaderCell" customModule="quikvid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uWW-mY-6kk" id="LZc-wZ-XFJ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uWW-mY-6kk" id="LZc-wZ-XFJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntX-b0-8Vk">
-                                                    <rect key="frame" x="316" y="15" width="44" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="MVJ-fO-yV0"/>
-                                                        <constraint firstAttribute="height" constant="44" id="siY-fl-uXi"/>
-                                                    </constraints>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntX-b0-8Vk">
+                                                    <rect key="frame" x="336" y="19.5" width="24" height="24"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                     <state key="normal" image="btn_options_black"/>
                                                     <connections>
                                                         <action selector="optionsButtonTapped:" destination="uWW-mY-6kk" eventType="touchUpInside" id="GWV-iE-mHT"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1l-4H-70y">
-                                                    <rect key="frame" x="15" y="16" width="271" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1l-4H-70y">
+                                                    <rect key="frame" x="15" y="15" width="76" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ntX-b0-8Vk" firstAttribute="top" secondItem="LZc-wZ-XFJ" secondAttribute="topMargin" id="0Y4-32-k2b"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ntX-b0-8Vk" secondAttribute="bottom" id="7CD-rm-Me1"/>
-                                                <constraint firstItem="ntX-b0-8Vk" firstAttribute="leading" secondItem="r1l-4H-70y" secondAttribute="trailing" constant="15" id="HBu-Eu-HlC"/>
-                                                <constraint firstItem="r1l-4H-70y" firstAttribute="top" secondItem="LZc-wZ-XFJ" secondAttribute="topMargin" id="OoT-dl-Xlx"/>
-                                                <constraint firstItem="r1l-4H-70y" firstAttribute="top" secondItem="LZc-wZ-XFJ" secondAttribute="topMargin" id="QqO-WC-xXK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ntX-b0-8Vk" secondAttribute="trailing" id="ZmS-0r-hnm"/>
-                                                <constraint firstItem="r1l-4H-70y" firstAttribute="leading" secondItem="LZc-wZ-XFJ" secondAttribute="leadingMargin" constant="15" id="sIr-AZ-7kV"/>
+                                                <constraint firstAttribute="trailing" secondItem="ntX-b0-8Vk" secondAttribute="trailing" constant="15" id="6cA-Jl-ZYE"/>
+                                                <constraint firstAttribute="bottom" secondItem="ntX-b0-8Vk" secondAttribute="bottom" constant="10" id="87n-oi-k6g"/>
+                                                <constraint firstItem="r1l-4H-70y" firstAttribute="leading" secondItem="LZc-wZ-XFJ" secondAttribute="leadingMargin" id="cFk-pO-asc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r1l-4H-70y" secondAttribute="bottom" constant="7" id="jCk-FE-c8m"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -98,7 +91,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B07-0g-dUj">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B07-0g-dUj">
                                                     <rect key="frame" x="15" y="45.5" width="345" height="0.5"/>
                                                     <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -107,8 +100,9 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bQk-II-CmL" firstAttribute="trailing" secondItem="fyM-Yp-9bC" secondAttribute="trailingMargin" constant="15" id="6Gf-bl-oLV"/>
+                                                <constraint firstItem="B07-0g-dUj" firstAttribute="leading" secondItem="fyM-Yp-9bC" secondAttribute="leading" constant="15" id="Cav-NL-g8B"/>
                                                 <constraint firstAttribute="trailing" secondItem="bQk-II-CmL" secondAttribute="trailing" constant="15" id="KS1-h8-FEv"/>
+                                                <constraint firstAttribute="trailing" secondItem="B07-0g-dUj" secondAttribute="trailing" constant="15" id="NMa-5W-fEB"/>
                                                 <constraint firstAttribute="bottom" secondItem="B07-0g-dUj" secondAttribute="bottom" id="dOA-vq-b8h"/>
                                                 <constraint firstItem="bQk-II-CmL" firstAttribute="top" secondItem="fyM-Yp-9bC" secondAttribute="topMargin" id="lhe-a1-XUi"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bQk-II-CmL" secondAttribute="bottom" id="n1d-Lq-SYD"/>
@@ -141,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyD-2u-2p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="-277.51124437781112"/>
+            <point key="canvasLocation" x="973.5" y="-278.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzB-sQ-zDA">
