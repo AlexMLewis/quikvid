@@ -10,6 +10,8 @@
 		B79624DC1FEF0622003C617F /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DB1FEF0622003C617F /* FollowService.swift */; };
 		B79624DE1FEF0E37003C617F /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79624DD1FEF0E37003C617F /* FindFriends.storyboard */; };
 		B79624E01FEF0FC4003C617F /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */; };
+		B7B06EE81FEF6258003EF950 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */; };
+		B7B06EEA1FEF62B9003EF950 /* CreateGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */; };
 		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		B79624DB1FEF0622003C617F /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = quikvid/Services/FollowService.swift; sourceTree = SOURCE_ROOT; };
 		B79624DD1FEF0E37003C617F /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = quikvid/Storyboards/FindFriends.storyboard; sourceTree = SOURCE_ROOT; };
 		B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = quikvid/Views/FindFriendsCell.swift; sourceTree = SOURCE_ROOT; };
+		B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateGroup.storyboard; path = quikvid/Storyboards/CreateGroup.storyboard; sourceTree = SOURCE_ROOT; };
 		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC570CC1FE5C54800FFFC19 /* Main.storyboard */,
+				B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */,
 				B79624DD1FEF0E37003C617F /* FindFriends.storyboard */,
 				CFC570FA1FE6D09E00FFFC19 /* Home.storyboard */,
 				CFC570C51FE5AF0200FFFC19 /* Login.storyboard */,
@@ -181,6 +186,7 @@
 				CFC570D01FE5CC2200FFFC19 /* CreateUsernameViewController.swift */,
 				CFC570E01FE6008500FFFC19 /* HomeViewController.swift */,
 				CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */,
+				B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				B79624DE1FEF0E37003C617F /* FindFriends.storyboard in Resources */,
 				CFC570FB1FE6D09E00FFFC19 /* Home.storyboard in Resources */,
 				CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */,
+				B7B06EEA1FEF62B9003EF950 /* CreateGroup.storyboard in Resources */,
 				CFC570C61FE5AF0200FFFC19 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +395,7 @@
 				CF5E24E91FE6F6BA007C6596 /* PostActionCell.swift in Sources */,
 				B79624DC1FEF0622003C617F /* FollowService.swift in Sources */,
 				B79624E01FEF0FC4003C617F /* FindFriendsCell.swift in Sources */,
+				B7B06EE81FEF6258003EF950 /* CreateGroupViewController.swift in Sources */,
 				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
 				CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */,
 				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,

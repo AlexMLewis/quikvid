@@ -13,9 +13,14 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - Properties
-    
     var posts = [Post]()
+    
+    let timestampFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,11 +31,6 @@ class HomeViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func configureTableView() {
         
@@ -39,18 +39,6 @@ class HomeViewController: UIViewController {
         // remove separators from cells
         tableView.separatorStyle = .none
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -77,6 +65,7 @@ extension HomeViewController: UITableViewDataSource {
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell", for: indexPath) as! PostActionCell
+            cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
             return cell
             
         default:

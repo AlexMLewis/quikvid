@@ -26,7 +26,6 @@ struct PostService {
     
     // Write a new Post object to database
     private static func create(forURLString urlString: String, aspectHeight: CGFloat) {
-        // create new post in database
         
         // Create a reference to the current user
         let currentUser = User.current

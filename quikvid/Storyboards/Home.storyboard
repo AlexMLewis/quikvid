@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--quikvid-->
         <scene sceneID="AaK-I6-8sp">
             <objects>
                 <viewController id="Abl-ay-AKU" customClass="HomeViewController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vdE-C0-e2B"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mt0-Oq-t8B"/>
+                    <navigationItem key="navigationItem" title="quikvid" id="Mt0-Oq-t8B"/>
                     <connections>
                         <outlet property="tableView" destination="Obl-11-qbn" id="8aZ-pe-UNO"/>
                     </connections>
