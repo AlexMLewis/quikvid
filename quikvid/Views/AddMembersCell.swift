@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol AddMembersCellDelegate: class {
+    func didTapAddMemberButton(_ followButton: UIButton, on cell: AddMembersCell)
+}
+
 class AddMembersCell: UITableViewCell {
+    
+    weak var delegate: AddMembersCellDelegate?
 
     @IBOutlet weak var addMemberButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +33,6 @@ class AddMembersCell: UITableViewCell {
     }
     
     @IBAction func addMemberButtonTapped(_ sender: UIButton) {
-        print("add member button tapped")
+        delegate?.didTapAddMemberButton(sender, on: self)
     }
 }

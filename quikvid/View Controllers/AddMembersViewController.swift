@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddMembersViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class AddMembersViewController: UIViewController {
     // MARK: - Properties
     
     var users = [User]()
+    var isSelected = false
     
     // MARK: - Subviews
 
@@ -54,7 +56,7 @@ extension AddMembersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddMembersCell") as! AddMembersCell
-        
+        cell.delegate = self
         configure(cell: cell, atIndexPath: indexPath)
         
         return cell
@@ -64,6 +66,43 @@ extension AddMembersViewController: UITableViewDataSource {
         let user = users[indexPath.row]
         
         cell.usernameLabel.text = user.username
-        cell.addMemberButton.isSelected = false
+        cell.addMemberButton.isSelected = isSelected
     }
 }
+
+extension AddMembersViewController: AddMembersCellDelegate {
+    func didTapAddMemberButton(_ addMemberButton: UIButton, on cell: AddMembersCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        addMemberButton.isUserInteractionEnabled = false
+        defer {
+            addMemberButton.isUserInteractionEnabled = true
+        }
+        
+        addMemberButton.isUserInteractionEnabled = false
+        let followee = users[indexPath.row]
+        
+        let followeeUID = followee.uid
+        
+        let groupData = ["users/\(followeeUID)/groups/\(group)" : true,
+                         "groups/\(group)/\(followeeUID)" : true]
+        
+        let ref = Database.database().reference()
+        ref.updateChildValues(groupData)
+        
+        isSelected = true
+        self.tableView.reloadRows(at: [indexPath], with: .none)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

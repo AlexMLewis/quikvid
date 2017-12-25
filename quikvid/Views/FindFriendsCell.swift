@@ -31,8 +31,8 @@ class FindFriendsCell: UITableViewCell {
         followButton.layer.cornerRadius = 6
         followButton.clipsToBounds = true
         
-        followButton.setTitle("Follow", for: .normal)
-        followButton.setTitle("Following", for: .selected)
+        followButton.setTitle("Friend", for: .normal)
+        followButton.setTitle("Unfriend", for: .selected)
     }
 
     // MARK: - IBActions
