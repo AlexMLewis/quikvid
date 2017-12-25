@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73040A11FF0697B005AB9B9 /* AddMembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73040A01FF0697B005AB9B9 /* AddMembersCell.swift */; };
 		B79624DC1FEF0622003C617F /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DB1FEF0622003C617F /* FollowService.swift */; };
 		B79624DE1FEF0E37003C617F /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79624DD1FEF0E37003C617F /* FindFriends.storyboard */; };
 		B79624E01FEF0FC4003C617F /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */; };
 		B7B06EE81FEF6258003EF950 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */; };
 		B7B06EEA1FEF62B9003EF950 /* CreateGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */; };
+		B7E3023F1FF053040076D0E0 /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */; };
 		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
@@ -44,11 +46,13 @@
 		16F5639C91983C8B98373C15 /* Pods_quikvid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quikvid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E058630ADAEBD32EF6CD42 /* Pods-quikvid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.release.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.release.xcconfig"; sourceTree = "<group>"; };
 		989858CC7CAEA85A7F696346 /* Pods-quikvid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quikvid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quikvid/Pods-quikvid.debug.xcconfig"; sourceTree = "<group>"; };
+		B73040A01FF0697B005AB9B9 /* AddMembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddMembersCell.swift; path = quikvid/Views/AddMembersCell.swift; sourceTree = SOURCE_ROOT; };
 		B79624DB1FEF0622003C617F /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = quikvid/Services/FollowService.swift; sourceTree = SOURCE_ROOT; };
 		B79624DD1FEF0E37003C617F /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = quikvid/Storyboards/FindFriends.storyboard; sourceTree = SOURCE_ROOT; };
 		B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = quikvid/Views/FindFriendsCell.swift; sourceTree = SOURCE_ROOT; };
 		B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateGroup.storyboard; path = quikvid/Storyboards/CreateGroup.storyboard; sourceTree = SOURCE_ROOT; };
+		B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
 		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		CFC570F01FE6C25A00FFFC19 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = quikvid/Services/PostService.swift; sourceTree = SOURCE_ROOT; };
 		CFC570F41FE6C5CE00FFFC19 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = quikvid/Models/Post.swift; sourceTree = SOURCE_ROOT; };
 		CFC570F61FE6C94400FFFC19 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "quikvid/Extensions/UIImage+Size.swift"; sourceTree = SOURCE_ROOT; };
-		CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "quikvid/Extensions/StorageReference+Post.swift"; sourceTree = SOURCE_ROOT; };
+		CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "quikvid/New Group/StorageReference+Post.swift"; sourceTree = SOURCE_ROOT; };
 		CFC570FA1FE6D09E00FFFC19 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = quikvid/Storyboards/Home.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,7 @@
 				CF4FFCC21FE6DF4C00CD6B0D /* PostImageCell.swift */,
 				CF5E24E81FE6F6BA007C6596 /* PostActionCell.swift */,
 				B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */,
+				B73040A01FF0697B005AB9B9 /* AddMembersCell.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -187,6 +192,7 @@
 				CFC570E01FE6008500FFFC19 /* HomeViewController.swift */,
 				CFC570E21FE6009200FFFC19 /* FindFriendsViewController.swift */,
 				B7B06EE71FEF6258003EF950 /* CreateGroupViewController.swift */,
+				B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC570D51FE5D29100FFFC19 /* UserService.swift */,
+				CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */,
 				CFC570EE1FE6C10800FFFC19 /* StorageService.swift */,
 				CFC570F01FE6C25A00FFFC19 /* PostService.swift */,
 				B79624DB1FEF0622003C617F /* FollowService.swift */,
@@ -218,7 +225,6 @@
 			children = (
 				CFC570DE1FE5F99600FFFC19 /* Storyboard+Utility.swift */,
 				CFC570F61FE6C94400FFFC19 /* UIImage+Size.swift */,
-				CFC570F81FE6CEED00FFFC19 /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			path = "New Group";
@@ -398,8 +404,10 @@
 				B7B06EE81FEF6258003EF950 /* CreateGroupViewController.swift in Sources */,
 				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
 				CF4FFCC31FE6DF4C00CD6B0D /* PostImageCell.swift in Sources */,
+				B73040A11FF0697B005AB9B9 /* AddMembersCell.swift in Sources */,
 				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,
 				CFC570E11FE6008500FFFC19 /* HomeViewController.swift in Sources */,
+				B7E3023F1FF053040076D0E0 /* AddMembersViewController.swift in Sources */,
 				CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */,
 				CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */,
 				CFC570E31FE6009200FFFC19 /* FindFriendsViewController.swift in Sources */,

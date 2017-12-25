@@ -103,6 +103,41 @@ struct UserService {
             })
         })
     }
+    
+    // fetch all users current user is following
+    static func friendsOfCurrentUser(completion: @escaping ([User]) -> Void) {
+        let currentUser = User.current
+        
+        // reference to users current user is following represented as [uid: true]
+        let ref = Database.database().reference().child("users")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else { return completion([]) }
+            
+            var following =
+                snapshot
+                    .flatMap(User.init)
+                    .filter { $0.uid != currentUser.uid }
+            
+            let dispatchGroup = DispatchGroup()
+            following.forEach { (user) in
+                dispatchGroup.enter()
+                
+                // filter out users we don't follow
+                FollowService.isUserFollowed(user) { (isFollowed) in
+                    if !isFollowed {
+                        following = following.filter { $0.uid != user.uid}
+                    }
+                    dispatchGroup.leave()
+                }
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(following)
+            })
+        })
+    }
 }
 
 
