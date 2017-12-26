@@ -21,7 +21,7 @@ class Post {
         self.imageURL = imageURL
         self.imageHeight = imageHeight
         self.creationDate = Date()
-        self.poster = User.current.uid
+        self.poster = User.current.username
         self.group = group
     }
     
