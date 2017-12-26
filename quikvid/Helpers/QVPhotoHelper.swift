@@ -35,8 +35,7 @@ class QVPhotoHelper: NSObject {
             
             // Create a new UIAlertAction
             // Each UIAlertAction represents an action on the UIAlertController
-            let capturePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler: { [unowned self]
-                action in
+            let capturePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler: { [unowned self] action in
                 
                 self.presentImagePickerController(with: .camera, from: viewController)
             })
@@ -47,8 +46,7 @@ class QVPhotoHelper: NSObject {
         
         // Add photo library option to alertController
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let uploadAction = UIAlertAction(title: "Upload from Library", style: .default, handler: { [unowned self]
-                action in
+            let uploadAction = UIAlertAction(title: "Upload from Library", style: .default, handler: { [unowned self] action in
                 
                 self.presentImagePickerController(with: .photoLibrary, from: viewController)
             })
@@ -64,7 +62,7 @@ class QVPhotoHelper: NSObject {
         viewController.present(alertController, animated: true)
     }
     
-    func presentImagePickerController (with sourceType: UIImagePickerControllerSourceType, from viewController: UIViewController) {
+    func presentImagePickerController(with sourceType: UIImagePickerControllerSourceType, from viewController: UIViewController) {
         
         // Create a new instance of UIImagePickerController (presents a native UI component)
         let imagePickerController = UIImagePickerController()

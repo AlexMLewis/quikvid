@@ -86,7 +86,7 @@ extension AddMembersViewController: AddMembersCellDelegate {
         let followeeUID = followee.uid
         
         let groupData = ["users/\(followeeUID)/groups/\(group)" : true,
-                         "groups/\(group)/\(followeeUID)" : true]
+                         "groups/\(group)/members/\(followeeUID)" : true]
         
         let ref = Database.database().reference()
         ref.updateChildValues(groupData)

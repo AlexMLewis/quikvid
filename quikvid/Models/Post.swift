@@ -14,24 +14,32 @@ class Post {
     let imageURL: String
     let imageHeight: CGFloat
     let creationDate: Date
+    let poster: String
+    let group: String
     
-    init(imageURL: String, imageHeight: CGFloat) {
+    init(imageURL: String, imageHeight: CGFloat, group: String) {
         self.imageURL = imageURL
         self.imageHeight = imageHeight
         self.creationDate = Date()
+        self.poster = User.current.uid
+        self.group = group
     }
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let imageURL = dict["image_url"] as? String,
             let imageHeight = dict["image_height"] as? CGFloat,
-            let createdAgo = dict["created_at"] as? TimeInterval
+            let createdAgo = dict["created_at"] as? TimeInterval,
+            let poster = dict["poster"] as? String,
+            let group = dict["group"] as? String
             else { return nil }
         
         self.key = snapshot.key
         self.imageURL = imageURL
         self.imageHeight = imageHeight
         self.creationDate = Date(timeIntervalSince1970: createdAgo)
+        self.poster = poster
+        self.group = group
     }
     
     var dictValue: [String : Any] {
@@ -39,6 +47,8 @@ class Post {
         
         return ["image_url" : imageURL,
                 "image_height" : imageHeight,
-                "created_at" : createdAgo]
+                "created_at" : createdAgo,
+                "poster" : poster,
+                "group": group]
     }
 }

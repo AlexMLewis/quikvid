@@ -6,32 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Lxj-sm-KzM">
-            <objects>
-                <viewController id="MJE-Eq-rXQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kpr-Kk-WVG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="31A-pj-CB3"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="" image="tab_plus_black" id="KaB-x1-Y5y">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nws-Wp-Syl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="650" y="-66"/>
-        </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="m6t-7d-9nU">
             <objects>
-                <tabBarController id="nda-qi-pga" customClass="MainTabBarController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="nda-qi-pga" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4wP-79-Dou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -39,7 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HCc-0f-zOl" kind="relationship" relationship="viewControllers" id="jvE-cI-vtQ"/>
-                        <segue destination="MJE-Eq-rXQ" kind="relationship" relationship="viewControllers" id="tE0-Qd-5ch"/>
+                        <segue destination="hO5-h5-a85" kind="relationship" relationship="viewControllers" id="tE0-Qd-5ch"/>
                         <segue destination="enO-bg-dfP" kind="relationship" relationship="viewControllers" id="VLo-tS-awu"/>
                         <segue destination="nYn-Ud-HaH" kind="relationship" relationship="viewControllers" id="BNx-Km-bfg"/>
                     </connections>
@@ -56,7 +37,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJg-L1-JzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="-554"/>
+            <point key="canvasLocation" x="400" y="-278"/>
         </scene>
         <!--FindFriends-->
         <scene sceneID="Ru4-g5-6ed">
@@ -66,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hr-fM-NDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="315"/>
+            <point key="canvasLocation" x="400" y="157"/>
         </scene>
         <!--CreateGroup-->
         <scene sceneID="rqX-fr-rGC">
@@ -76,10 +57,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hc6-NZ-kdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="746.62668665667172"/>
+            <point key="canvasLocation" x="434" y="343"/>
+        </scene>
+        <!--UploadPhoto-->
+        <scene sceneID="AqF-dM-DjS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UploadPhoto" id="hO5-h5-a85" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Cqm-ne-xSl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6c-YF-RW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="-71"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="tab_plus_black" width="25" height="25"/>
-    </resources>
 </document>

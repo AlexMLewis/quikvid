@@ -27,7 +27,7 @@ class CreateGroupViewController: UIViewController {
         let currentUID = User.current.uid
         
         let groupData = ["users/\(currentUID)/groups/\(groupName)" : true,
-                          "groups/\(groupName)/\(currentUID)" : true]
+                          "groups/\(groupName)/members/\(currentUID)" : true]
         
         let ref = Database.database().reference()
         ref.updateChildValues(groupData)

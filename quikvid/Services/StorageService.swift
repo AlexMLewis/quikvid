@@ -10,8 +10,8 @@ import UIKit
 import FirebaseStorage
 
 struct StorageService {
-    // provide method for uploading images
     
+    // provide method for uploading images
     static func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
         
         // Change the image from an UIImage to Data

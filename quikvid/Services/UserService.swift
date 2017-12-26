@@ -49,17 +49,40 @@ struct UserService {
         }
     }
     
-    // Retrieve all of a user's posts form Firebase
-    static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+    // Retrieve all the posts in the groups associated with the current user
+    static func allGroupPosts(for user: User, completion: @escaping ([Post]) -> Void) {
         
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
-                return completion([])
+        // all the posts to be returned
+        var allPosts = [Post]()
+        var groupNames = [String]()
+        
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        UserService.groupsOfCurrentUser { (groups) in
+            groupNames = groups
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: .main, execute: {
+            var counter = 1
+        
+            for group in groupNames {
+                let ref = Database.database().reference().child("groups").child(group).child("posts")
+                
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                        return completion([])
+                    }
+                    
+                    let posts = snapshot.reversed().flatMap(Post.init)
+                    allPosts += posts
+                    if counter == groupNames.count {
+                        completion(allPosts)
+                    } else {
+                        counter += 1
+                    }
+                })
             }
-            
-            let posts = snapshot.reversed().flatMap(Post.init)
-            completion(posts)
         })
     }
     
@@ -108,7 +131,7 @@ struct UserService {
     static func friendsOfCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
         
-        // reference to users current user is following represented as [uid: true]
+        // reference to all users
         let ref = Database.database().reference().child("users")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -136,6 +159,20 @@ struct UserService {
             dispatchGroup.notify(queue: .main, execute: {
                 completion(following)
             })
+        })
+    }
+    
+    // fetch all groups current user is part of
+    static func groupsOfCurrentUser(completion: @escaping ([String]) -> Void) {
+        let currentUser = User.current
+        
+        let ref = Database.database().reference().child("users").child(currentUser.uid).child("groups")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let value = snapshot.value as? NSDictionary
+                else {return completion([])}
+            let groups = value.allKeys as! [String]
+            completion(groups)
         })
     }
 }
