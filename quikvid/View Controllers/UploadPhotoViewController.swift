@@ -35,6 +35,8 @@ class UploadPhotoViewController: UIViewController {
         }
     }
     
+    // fetch all groups we're in and set them to our datasource
+    // refresh UI on main thread because all UI updates must be on the main thread
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

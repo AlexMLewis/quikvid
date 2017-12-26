@@ -11,6 +11,7 @@
 		B7057BB71FF1732D006512FF /* UploadPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7057BB61FF1732D006512FF /* UploadPhoto.storyboard */; };
 		B7057BBB1FF174C5006512FF /* UploadPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7057BBA1FF174C5006512FF /* UploadPhotoCell.swift */; };
 		B71B85B61FF2ED0300D3585E /* MakeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B85B51FF2ED0300D3585E /* MakeVideoViewController.swift */; };
+		B71B85B81FF30B7B00D3585E /* MakeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B85B71FF30B7B00D3585E /* MakeVideoCell.swift */; };
 		B73040A11FF0697B005AB9B9 /* AddMembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73040A01FF0697B005AB9B9 /* AddMembersCell.swift */; };
 		B73C96201FF177A6000CCF1E /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73C961F1FF177A6000CCF1E /* StorageReference+Post.swift */; };
 		B7685A571FF214A7007AD80D /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7685A561FF214A7007AD80D /* PostHeaderCell.swift */; };
@@ -53,6 +54,7 @@
 		B7057BB61FF1732D006512FF /* UploadPhoto.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UploadPhoto.storyboard; path = quikvid/Storyboards/UploadPhoto.storyboard; sourceTree = SOURCE_ROOT; };
 		B7057BBA1FF174C5006512FF /* UploadPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UploadPhotoCell.swift; path = quikvid/Views/UploadPhotoCell.swift; sourceTree = SOURCE_ROOT; };
 		B71B85B51FF2ED0300D3585E /* MakeVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeVideoViewController.swift; sourceTree = "<group>"; };
+		B71B85B71FF30B7B00D3585E /* MakeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeVideoCell.swift; path = "quikvid/View Controllers/MakeVideoCell.swift"; sourceTree = SOURCE_ROOT; };
 		B73040A01FF0697B005AB9B9 /* AddMembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddMembersCell.swift; path = quikvid/Views/AddMembersCell.swift; sourceTree = SOURCE_ROOT; };
 		B73C961F1FF177A6000CCF1E /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "quikvid/Services/StorageReference+Post.swift"; sourceTree = SOURCE_ROOT; };
 		B7685A561FF214A7007AD80D /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = quikvid/Views/PostHeaderCell.swift; sourceTree = SOURCE_ROOT; };
@@ -162,6 +164,7 @@
 				B7BFDE191FF20C7A009C65F2 /* PostImageCell.swift */,
 				B7685A561FF214A7007AD80D /* PostHeaderCell.swift */,
 				B7685A581FF21889007AD80D /* PostActionCell.swift */,
+				B71B85B71FF30B7B00D3585E /* MakeVideoCell.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -417,6 +420,7 @@
 				B7E3023F1FF053040076D0E0 /* AddMembersViewController.swift in Sources */,
 				CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */,
 				B73C96201FF177A6000CCF1E /* StorageReference+Post.swift in Sources */,
+				B71B85B81FF30B7B00D3585E /* MakeVideoCell.swift in Sources */,
 				CFC570DF1FE5F99600FFFC19 /* Storyboard+Utility.swift in Sources */,
 				B7057BBB1FF174C5006512FF /* UploadPhotoCell.swift in Sources */,
 				B7057BB51FF17304006512FF /* UploadPhotoViewController.swift in Sources */,

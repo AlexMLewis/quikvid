@@ -171,9 +171,68 @@
                     <view key="view" contentMode="scaleToFill" id="cNO-o9-m7K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZS1-Xi-QFn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MakeVideoCell" rowHeight="71" id="eFO-uc-Tvy" customClass="MakeVideoCell" customModule="quikvid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFO-uc-Tvy" id="Q1q-SA-cTl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umW-zj-hbW">
+                                                    <rect key="frame" x="30" y="11" width="193" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY3-W5-dRs">
+                                                    <rect key="frame" x="235" y="21" width="115" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="qac-PG-W3H"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Make Video"/>
+                                                    <connections>
+                                                        <action selector="makeVideoButtonTapped:" destination="eFO-uc-Tvy" eventType="touchUpInside" id="N1v-LH-apt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="umW-zj-hbW" firstAttribute="leading" secondItem="Q1q-SA-cTl" secondAttribute="leadingMargin" constant="15" id="GmE-ha-hZZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="umW-zj-hbW" secondAttribute="bottom" id="Swi-Ok-WYw"/>
+                                                <constraint firstItem="umW-zj-hbW" firstAttribute="top" secondItem="Q1q-SA-cTl" secondAttribute="topMargin" id="UXr-Vg-ml9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DY3-W5-dRs" secondAttribute="trailing" constant="10" id="fJA-P9-HpH"/>
+                                                <constraint firstItem="DY3-W5-dRs" firstAttribute="top" secondItem="Q1q-SA-cTl" secondAttribute="topMargin" constant="10" id="hTf-Ne-NkZ"/>
+                                                <constraint firstItem="DY3-W5-dRs" firstAttribute="leading" secondItem="umW-zj-hbW" secondAttribute="trailing" constant="12" id="jwe-Pw-Swi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DY3-W5-dRs" secondAttribute="bottom" constant="10" id="so7-rd-hut"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="groupNameLabel" destination="umW-zj-hbW" id="MM2-my-wL6"/>
+                                            <outlet property="makeVideoButton" destination="DY3-W5-dRs" id="9t7-tc-4Y4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Oiy-gY-O9S" id="VDC-UO-Ede"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aBj-XJ-8bF" firstAttribute="bottom" secondItem="ZS1-Xi-QFn" secondAttribute="bottom" id="Ekx-dW-cdQ"/>
+                            <constraint firstItem="aBj-XJ-8bF" firstAttribute="trailing" secondItem="ZS1-Xi-QFn" secondAttribute="trailing" id="VKG-xU-uGN"/>
+                            <constraint firstItem="ZS1-Xi-QFn" firstAttribute="leading" secondItem="aBj-XJ-8bF" secondAttribute="leading" id="l3P-KX-v33"/>
+                            <constraint firstItem="ZS1-Xi-QFn" firstAttribute="top" secondItem="aBj-XJ-8bF" secondAttribute="top" id="vGd-JH-PbG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aBj-XJ-8bF"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ZS1-Xi-QFn" id="3Ov-lN-mRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niQ-Pp-RBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
