@@ -143,14 +143,41 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vdE-C0-e2B"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quikvid" id="Mt0-Oq-t8B"/>
+                    <navigationItem key="navigationItem" title="Quikvid" id="Mt0-Oq-t8B">
+                        <barButtonItem key="rightBarButtonItem" id="lJN-ya-g1o">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d5j-JL-EKc">
+                                <rect key="frame" x="334" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_video_camera_black"/>
+                                <connections>
+                                    <action selector="makeVideoButtonTapped:" destination="Abl-ay-AKU" eventType="touchUpInside" id="UEQ-DB-iZ6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="KaE-7m-BQU" id="Kjd-Ep-drF"/>
+                        <segue destination="Oiy-gY-O9S" kind="show" identifier="toMakeVideo" id="y9b-IU-nEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyD-2u-2p7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="-279.31034482758622"/>
+        </scene>
+        <!--Make Video View Controller-->
+        <scene sceneID="LVi-eA-tyP">
+            <objects>
+                <viewController id="Oiy-gY-O9S" customClass="MakeVideoViewController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNO-o9-m7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aBj-XJ-8bF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niQ-Pp-RBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="-276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzB-sQ-zDA">
@@ -176,6 +203,7 @@
     </scenes>
     <resources>
         <image name="btn_options_black" width="24" height="24"/>
+        <image name="btn_video_camera_black" width="25" height="25"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>
 </document>

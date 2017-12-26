@@ -31,6 +31,10 @@ class HomeViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    @IBAction func makeVideoButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toMakeVideo", sender: self)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
