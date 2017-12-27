@@ -23,6 +23,7 @@
 		B7B06EEA1FEF62B9003EF950 /* CreateGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */; };
 		B7BFDE1A1FF20C7A009C65F2 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFDE191FF20C7A009C65F2 /* PostImageCell.swift */; };
 		B7E3023F1FF053040076D0E0 /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */; };
+		B7E6E49E1FF428B8003F0F88 /* MakeVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6E49D1FF428B8003F0F88 /* MakeVideoService.swift */; };
 		BFC64C93B2C4BD863E4DA91A /* Pods_quikvid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5639C91983C8B98373C15 /* Pods_quikvid.framework */; };
 		CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DA81FE5AB410068AD3C /* AppDelegate.swift */; };
 		CF344DB01FE5AB410068AD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF344DAF1FE5AB410068AD3C /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		B7B06EE91FEF62B9003EF950 /* CreateGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateGroup.storyboard; path = quikvid/Storyboards/CreateGroup.storyboard; sourceTree = SOURCE_ROOT; };
 		B7BFDE191FF20C7A009C65F2 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = quikvid/Views/PostImageCell.swift; sourceTree = SOURCE_ROOT; };
 		B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
+		B7E6E49D1FF428B8003F0F88 /* MakeVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeVideoService.swift; path = quikvid/Services/MakeVideoService.swift; sourceTree = SOURCE_ROOT; };
 		CF344DA51FE5AB410068AD3C /* quikvid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quikvid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF344DA81FE5AB410068AD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF344DAF1FE5AB410068AD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				CFC570EE1FE6C10800FFFC19 /* StorageService.swift */,
 				CFC570F01FE6C25A00FFFC19 /* PostService.swift */,
 				B79624DB1FEF0622003C617F /* FollowService.swift */,
+				B7E6E49D1FF428B8003F0F88 /* MakeVideoService.swift */,
 			);
 			name = Services;
 			path = "New Group";
@@ -433,6 +436,7 @@
 				CFC570D11FE5CC2200FFFC19 /* CreateUsernameViewController.swift in Sources */,
 				B7685A571FF214A7007AD80D /* PostHeaderCell.swift in Sources */,
 				CF344DA91FE5AB410068AD3C /* AppDelegate.swift in Sources */,
+				B7E6E49E1FF428B8003F0F88 /* MakeVideoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
