@@ -19,7 +19,7 @@ import FirebaseStorage
 struct RenderSettings {
     var width: CGFloat = 1280
     var height: CGFloat = 720
-    var fps: Int32 = 2      // frames per second
+    var fps: Int32 = 1      // frames per second
     // var avCodecKey: AVVideoCodecType.h264
     var videoFilename = "render"
     var videoFilenameExt = "mp4"
