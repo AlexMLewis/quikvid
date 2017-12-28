@@ -7,12 +7,7 @@
 //
 //  Potentially tweak RenderSettings values
 //
-//  Examples Usage:
-//  let settings = RenderSettings()
-//  let imageAnimator = ImageAnimator(renderSettings: settings, imageArray: images)
-//  imageAnimator.render() {
-//      print("yes")
-//  }
+
 
 import Foundation
 import AVFoundation

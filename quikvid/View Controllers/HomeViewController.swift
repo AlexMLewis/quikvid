@@ -16,18 +16,31 @@ class HomeViewController: UIViewController {
     var groupNames = [String]()
     var posts = [Post]()
     
+    let refreshControl = UIRefreshControl()
+    
     func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
-        
+        reloadTimeline()
+    }
+    
+    @objc func reloadTimeline() {
         UserService.allGroupPosts(for: User.current) { (posts) in
             self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
             self.tableView.reloadData()
         }
     }
