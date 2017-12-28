@@ -80,7 +80,6 @@ extension AddMembersViewController: AddMembersCellDelegate {
             addMemberButton.isUserInteractionEnabled = true
         }
         
-        addMemberButton.isUserInteractionEnabled = false
         let followee = users[indexPath.row]
         
         let followeeUID = followee.uid

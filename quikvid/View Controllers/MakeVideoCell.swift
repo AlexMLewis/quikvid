@@ -27,6 +27,9 @@ class MakeVideoCell: UITableViewCell {
         makeVideoButton.layer.borderWidth = 1
         makeVideoButton.layer.cornerRadius = 6
         makeVideoButton.clipsToBounds = true
+        
+        makeVideoButton.setTitle("Make Video", for: .normal)
+        makeVideoButton.setTitle("Made!", for: .selected)
     }
     
     @IBAction func makeVideoButtonTapped(_ sender: UIButton) {
