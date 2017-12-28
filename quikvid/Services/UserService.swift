@@ -55,20 +55,20 @@ struct UserService {
         
         // all the posts to be returned
         var allPosts = [Post]()
-        var groupNames = [String]()
+        var groups = [String: String]()
         
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
-        UserService.groupsOfCurrentUser { (groups) in
-            groupNames = groups
+        UserService.groupsOfCurrentUserComplete { (groupInfo) in
+            groups = groupInfo
             dispatchGroup.leave()
         }
         
         dispatchGroup.notify(queue: .main, execute: {
             var counter = 1
         
-            for group in groupNames {
-                let ref = Database.database().reference().child("groups").child(group).child("posts")
+            for (group, owner) in groups {
+                let ref = Database.database().reference().child("groups").child(owner).child(group).child("posts")
                 
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
@@ -77,7 +77,7 @@ struct UserService {
                     
                     let posts = snapshot.reversed().flatMap(Post.init)
                     allPosts += posts
-                    if counter == groupNames.count {
+                    if counter == groups.count {
                         completion(allPosts)
                     } else {
                         counter += 1
@@ -177,33 +177,61 @@ struct UserService {
         })
     }
     
-    static func postsInGroup(groupName: String, completion: @escaping ([UIImage]) -> Void) {
-        let ref = Database.database().reference().child("groups").child(groupName).child("posts")
+    // fetch all groups and information current user is part of
+    static func groupsOfCurrentUserComplete(completion: @escaping ([String: String]) -> Void) {
+        let currentUser = User.current
+        
+        let ref = Database.database().reference().child("users").child(currentUser.uid).child("groups")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
-                return completion([])
-            }
+            guard let value = snapshot.value as? NSDictionary
+                else {return completion([:])}
+            completion(value as! [String : String])
+        })
+    }
+    
+    // all posts in this group
+    static func postsInGroup(groupName: String, completion: @escaping ([UIImage]) -> Void) {
+        
+        UserService.groupOwner(groupName: groupName) { (owner) in
             
-            let posts = snapshot.reversed().flatMap(Post.init)
+            let ref = Database.database().reference().child("groups").child(owner).child(groupName).child("posts")
             
-            let dispatchGroup = DispatchGroup()
-            
-            var images = [UIImage]()
-            
-            for post in posts {
-                dispatchGroup.enter()
-                let storageRef = Storage.storage().reference(forURL: post.imageURL)
-                storageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
-                    let pic = UIImage(data: data!)
-                    images.append(pic!)
-                    dispatchGroup.leave()
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                    return completion([])
                 }
-            }
-            
-            dispatchGroup.notify(queue: .main, execute: {
-                completion(images)
+                
+                let posts = snapshot.reversed().flatMap(Post.init)
+                
+                let dispatchGroup = DispatchGroup()
+                
+                var images = [UIImage]()
+                
+                for post in posts {
+                    dispatchGroup.enter()
+                    let storageRef = Storage.storage().reference(forURL: post.imageURL)
+                    storageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                        let pic = UIImage(data: data!)
+                        images.append(pic!)
+                        dispatchGroup.leave()
+                    }
+                }
+                
+                dispatchGroup.notify(queue: .main, execute: {
+                    completion(images)
+                })
             })
+        }
+    }
+    
+    // return owner of this group
+    static func groupOwner(groupName: String, completion: @escaping (String) -> Void) {
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("groups")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let owner = value?[groupName] as? String ?? ""
+            completion(owner)
         })
     }
 }

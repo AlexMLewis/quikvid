@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var groupNames = [String]()
     var posts = [Post]()
     
     let refreshControl = UIRefreshControl()
