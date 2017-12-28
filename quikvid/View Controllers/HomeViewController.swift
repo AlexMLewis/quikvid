@@ -18,6 +18,12 @@ class HomeViewController: UIViewController {
     
     let refreshControl = UIRefreshControl()
     
+    let timestampFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        return dateFormatter
+    }()
+    
     func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
@@ -79,6 +85,7 @@ extension HomeViewController: UITableViewDataSource {
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
             cell.groupNameLabel.text = post.group
+            cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
             
             return cell
         
