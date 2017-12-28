@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth.FIRUser
 import FirebaseDatabase
+import FirebaseStorage
 
 struct UserService {
     // Class method for reading a user from the database
@@ -173,6 +174,36 @@ struct UserService {
                 else {return completion([])}
             let groups = value.allKeys as! [String]
             completion(groups)
+        })
+    }
+    
+    static func postsInGroup(groupName: String, completion: @escaping ([UIImage]) -> Void) {
+        let ref = Database.database().reference().child("groups").child(groupName).child("posts")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion([])
+            }
+            
+            let posts = snapshot.reversed().flatMap(Post.init)
+            
+            let dispatchGroup = DispatchGroup()
+            
+            var images = [UIImage]()
+            
+            for post in posts {
+                dispatchGroup.enter()
+                let storageRef = Storage.storage().reference(forURL: post.imageURL)
+                storageRef.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                    let pic = UIImage(data: data!)
+                    images.append(pic!)
+                    dispatchGroup.leave()
+                }
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(images)
+            })
         })
     }
 }

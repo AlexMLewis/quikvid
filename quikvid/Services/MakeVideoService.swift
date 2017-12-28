@@ -5,26 +5,33 @@
 //  Created by Gordon Moore on 12/27/17.
 //  Copyright © 2017 Alexander Lewis. All rights reserved.
 //
-//  Need to write loadImages() and potentially tweak RenderSettings values
+//  Potentially tweak RenderSettings values
 //
 //  Examples Usage:
 //  let settings = RenderSettings()
-//  let imageAnimator = ImageAnimator(renderSettings: settings)
+//  let imageAnimator = ImageAnimator(renderSettings: settings, imageArray: images)
 //  imageAnimator.render() {
 //      print("yes")
 //  }
 
-//import Foundation
+import Foundation
 import AVFoundation
 import UIKit
 import Photos
+import FirebaseDatabase
+import FirebaseStorage
 
 struct RenderSettings {
-    var size: CGSize = .zero
-    var fps: Int32 = 6      // frames per second
+    var width: CGFloat = 1280
+    var height: CGFloat = 720
+    var fps: Int32 = 2      // frames per second
     // var avCodecKey: AVVideoCodecType.h264
     var videoFilename = "render"
     var videoFilenameExt = "mp4"
+    
+    var size: CGSize {
+        return CGSize(width: width, height: height)
+    }
     
     var outputURL: URL {
         // Use the CachesDirectory so the rendered video file sticks around as long as we need it to.
@@ -71,10 +78,11 @@ class ImageAnimator {
         }
     }
     
-    init(renderSettings: RenderSettings) {
+    // initialize ImageAnimator
+    init(renderSettings: RenderSettings, imageArray: [UIImage]) {
         settings = renderSettings
         videoWriter = VideoWriter(renderSettings: settings)
-        // images = loadImages()
+        images = imageArray
     }
     
     func render(completion: (()->Void)?) {
@@ -88,16 +96,6 @@ class ImageAnimator {
             completion?()
         }
     }
-    
-    // Replace this logic
-//    func loadImages() -> [UIImage] {
-//        var images = [UIImage]()
-//        for index in 1...10 {
-//            let filename = "\(index).jpg"
-//            images.append(UIImage(named: filename)!)
-//        }
-//        return images
-//    }
     
     // This is the callback function for VideoWriter.render()
     func appendPixelBuffers(writer: VideoWriter) -> Bool {
@@ -181,15 +179,15 @@ class VideoWriter {
         
         let avOutputSettings: [String: Any] = [
             AVVideoCodecKey: AVVideoCodecType.h264,
-            AVVideoWidthKey: NSNumber(value: Float(renderSettings.size.width)),
-            AVVideoHeightKey: NSNumber(value: Float(renderSettings.size.height))
+            AVVideoWidthKey: NSNumber(value: Float(renderSettings.width)),
+            AVVideoHeightKey: NSNumber(value: Float(renderSettings.height))
         ]
         
         func createPixelBufferAdaptor() {
             let sourcePixelBufferAttributesDictionary = [
                 kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: kCVPixelFormatType_32ARGB),
-                kCVPixelBufferWidthKey as String: NSNumber(value: Float(renderSettings.size.width)),
-                kCVPixelBufferHeightKey as String: NSNumber(value: Float(renderSettings.size.height))
+                kCVPixelBufferWidthKey as String: NSNumber(value: Float(renderSettings.width)),
+                kCVPixelBufferHeightKey as String: NSNumber(value: Float(renderSettings.height))
             ]
             pixelBufferAdaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoWriterInput, sourcePixelBufferAttributes: sourcePixelBufferAttributesDictionary)
         }

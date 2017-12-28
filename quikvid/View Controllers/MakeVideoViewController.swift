@@ -65,8 +65,14 @@ extension MakeVideoViewController: UITableViewDataSource {
 
 extension MakeVideoViewController: MakeVideoCellDelegate {
     func didTapMakeVideoButton(_ makeVideoButton: UIButton, on cell: MakeVideoCell) {
-        // Implement make video here
-        // Probably call a function to do it
+        
+        UserService.postsInGroup(groupName: cell.groupNameLabel.text!) { (images) in
+            let settings = RenderSettings()
+            let imageAnimator = ImageAnimator(renderSettings: settings, imageArray: images)
+            imageAnimator.render() {
+                print("yes")
+            }
+        }
     }
 }
 
