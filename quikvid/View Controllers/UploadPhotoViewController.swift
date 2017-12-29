@@ -74,19 +74,3 @@ extension UploadPhotoViewController: UploadPhotoCellDelegate {
         photoHelper.presentActionSheet(from: self)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

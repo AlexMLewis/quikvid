@@ -20,6 +20,7 @@ struct PostService {
             
             let urlString = downloadURL.absoluteString
             let aspectHeight = image.aspectHeight
+            
             create(forURLString: urlString, aspectHeight: aspectHeight, group: group)
         }
     }
