@@ -13,6 +13,8 @@ class FindFriendsViewController: UIViewController {
     // MARK: - Properties
     
     var users = [User]()
+    var filteredUsers = [User]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Subviews
     
@@ -26,6 +28,12 @@ class FindFriendsViewController: UIViewController {
         // remove separators for empty cells
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 71
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Users"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     // fetch all users from our database and set them to our datasource
@@ -41,28 +49,50 @@ class FindFriendsViewController: UIViewController {
             }
         }
     }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredUsers = users.filter({( user: User) -> Bool in
+            return user.username.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
 }
 
 // MARK: - UITableViewDataSource
 
 extension FindFriendsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredUsers.count
+        }
+        
         return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FindFriendsCell") as! FindFriendsCell
-        cell.delegate = self
-        configure(cell: cell, atIndexPath: indexPath)
+        let user: User
         
-        return cell
-    }
-    
-    func configure(cell: FindFriendsCell, atIndexPath indexPath: IndexPath) {
-        let user = users[indexPath.row]
+        if isFiltering() {
+            user = filteredUsers[indexPath.row]
+        } else {
+            user = users[indexPath.row]
+        }
         
         cell.usernameLabel.text = user.username
         cell.followButton.isSelected = user.isFollowed
+        cell.delegate = self
+        
+        return cell
     }
 }
 
@@ -83,6 +113,12 @@ extension FindFriendsViewController: FindFriendsCellDelegate {
             followee.isFollowed = !followee.isFollowed
             self.tableView.reloadRows(at: [indexPath], with: .none)
         }
+    }
+}
+
+extension FindFriendsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }
 
