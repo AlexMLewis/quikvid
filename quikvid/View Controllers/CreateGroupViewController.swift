@@ -39,6 +39,7 @@ class CreateGroupViewController: UIViewController {
         if segue.identifier  == "toAddMembers" {
             let vc = segue.destination as! AddMembersViewController
             vc.group = groupNameTextField.text!
+            self.groupNameTextField.text = nil
         }
         
     }

@@ -32,7 +32,7 @@
         <!--Home-->
         <scene sceneID="Gol-V8-O16">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="HCc-0f-zOl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="HCc-0f-zOl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="UlT-xy-8DT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJg-L1-JzO" userLabel="First Responder" sceneMemberID="firstResponder"/>

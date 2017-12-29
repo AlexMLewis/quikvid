@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="1484" y="745.27736131934034"/>
         </scene>
-        <!--Add Members View Controller-->
+        <!--Add Members-->
         <scene sceneID="upK-q0-ck3">
             <objects>
                 <viewController id="LZa-ic-buU" customClass="AddMembersViewController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,13 +153,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NxB-Sa-mB5"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Members" id="eCZ-DX-xXF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vfN-Vt-Jto">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="LZa-ic-buU" id="EOu-Bz-wdg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="t0T-Sz-wyu" id="zTl-5E-vhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcL-ax-Okv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340" y="744.3778110944528"/>
+            <point key="canvasLocation" x="2362" y="746"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AmS-nV-0cS">
@@ -174,9 +181,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bnQ-3O-xMq">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="phB-Ul-gdC" kind="relationship" relationship="rootViewController" id="HOr-md-tO7"/>
                     </connections>

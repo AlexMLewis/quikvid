@@ -46,6 +46,12 @@ class AddMembersViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
+        if let nvc = navigationController {
+            nvc.popViewController(animated: true)
+        }
+    }
 }
 
 extension AddMembersViewController: UITableViewDataSource {
