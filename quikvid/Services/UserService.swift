@@ -19,8 +19,6 @@ struct UserService {
             guard let user = User(snapshot: snapshot) else {
                 return completion(nil)
             }
-            
-            // handle newly created user here
             completion(user)
         })
     }
@@ -89,39 +87,24 @@ struct UserService {
     
     // fetch all users on the app and display them
     static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
-
         let currentUser = User.current
-
-        // reference to read all users from the database
         let ref = Database.database().reference().child("users")
-
-        // read users node from database
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
                 else { return completion([]) }
-
-            // take snapshot and:
-            // 1. convert all of the child DataSnapshot into User
-            // 2. filter out the current user object from the User array
             let users =
                 snapshot
                     .flatMap(User.init)
                     .filter { $0.uid != currentUser.uid }
-
-            // Create new DispatchGroup so that we can be notified when all asynchronous tasks are finished executing
-            // use the notify(queue:) method on DispatchGroup as completion handler for when all follow data has been read
             let dispatchGroup = DispatchGroup()
             users.forEach { (user) in
                 dispatchGroup.enter()
 
-                // make a request for each individual user to determine if the user is being followed by the current user
                 FollowService.isUserFollowed(user) { (isFollowed) in
                     user.isFollowed = isFollowed
                     dispatchGroup.leave()
                 }
             }
-
-            // run the completion block after all follow relationship data has returned
             dispatchGroup.notify(queue: .main, execute: {
                 completion(users)
             })
@@ -132,7 +115,6 @@ struct UserService {
     static func friendsOfCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
         
-        // reference to all users
         let ref = Database.database().reference().child("users")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -166,9 +148,7 @@ struct UserService {
     // fetch all groups current user is part of
     static func groupsOfCurrentUser(completion: @escaping ([String]) -> Void) {
         let currentUser = User.current
-        
         let ref = Database.database().reference().child("users").child(currentUser.uid).child("groups")
-        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let value = snapshot.value as? NSDictionary
                 else {return completion([])}

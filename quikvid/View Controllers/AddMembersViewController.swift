@@ -80,23 +80,18 @@ extension AddMembersViewController: AddMembersCellDelegate {
     func didTapAddMemberButton(_ addMemberButton: UIButton, on cell: AddMembersCell) {
         
         guard let indexPath = tableView.indexPath(for: cell) else { return }
-        
         addMemberButton.isUserInteractionEnabled = false
         defer {
             addMemberButton.isUserInteractionEnabled = true
         }
         
         let followee = users[indexPath.row]
-        
         let followeeUID = followee.uid
         let currentUID = User.current.uid
-        
         let groupData = ["users/\(followeeUID)/groups/\(group)" : currentUID,
                          "groups/\(currentUID)/\(group)/members/\(followeeUID)" : "true"]
-        
         let ref = Database.database().reference()
         ref.updateChildValues(groupData)
-        
         isSelected = true
         self.tableView.reloadRows(at: [indexPath], with: .none)
     }

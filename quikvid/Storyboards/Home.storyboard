@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quikvid-->
+        <!--Slideshow-->
         <scene sceneID="AaK-I6-8sp">
             <objects>
                 <viewController id="Abl-ay-AKU" customClass="HomeViewController" customModule="quikvid" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,7 +143,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vdE-C0-e2B"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quikvid" id="Mt0-Oq-t8B">
+                    <navigationItem key="navigationItem" title="Slideshow" id="Mt0-Oq-t8B">
                         <barButtonItem key="rightBarButtonItem" id="lJN-ya-g1o">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d5j-JL-EKc">
                                 <rect key="frame" x="334" y="9.5" width="25" height="25"/>

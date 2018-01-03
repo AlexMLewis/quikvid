@@ -9,26 +9,23 @@
 import UIKit
 import FirebaseDatabase
 
-class CreateGroupViewController: UIViewController {
+class CreateGroupViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var groupNameTextField: UITextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.groupNameTextField.delegate = self
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard let groupName = groupNameTextField.text,
             !groupName.isEmpty else { return }
-        
         let currentUID = User.current.uid
-        
         let groupData = ["users/\(currentUID)/groups/\(groupName)" : currentUID,
                           "groups/\(currentUID)/\(groupName)/members/\(currentUID)" : "true"]
-        
         let ref = Database.database().reference()
         ref.updateChildValues(groupData)
         
@@ -41,6 +38,14 @@ class CreateGroupViewController: UIViewController {
             vc.group = groupNameTextField.text!
             self.groupNameTextField.text = nil
         }
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        groupNameTextField.resignFirstResponder()
+        return true
     }
 }

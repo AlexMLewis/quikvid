@@ -29,7 +29,6 @@ class UploadPhotoViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 71
         
-        // set the completionHandler property of QVPhotoHelper
         photoHelper.completionHandler = { image in
             PostService.create(for: image, group: self.group)
         }
