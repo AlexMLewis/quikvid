@@ -214,6 +214,28 @@ struct UserService {
             completion(owner)
         })
     }
+    
+    static func groupInfo(groupName: String, completion: @escaping (Int, [Post]) -> Void) {
+        UserService.groupOwner(groupName: groupName) { (owner) in
+            
+            let postRef = Database.database().reference().child("groups").child(owner).child(groupName).child("posts")
+            let memberRef = Database.database().reference().child("groups").child(owner).child(groupName).child("members")
+            
+            postRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                    return completion(0, [])
+                }
+                
+                let posts = snapshot.reversed().flatMap(Post.init)
+                
+                memberRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    
+                    completion(value!.count, posts)
+                })
+            })
+        }
+    }
 }
 
 

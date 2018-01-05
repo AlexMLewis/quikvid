@@ -15,6 +15,7 @@ class UploadPhotoViewController: UIViewController {
     var groups = [String]()
     let photoHelper = QVPhotoHelper()
     var group = ""
+    var groupToView = ""
     
     // MARK: - Subviews
 
@@ -47,6 +48,13 @@ class UploadPhotoViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "toGroupViewController" {
+            let vc = segue.destination as! GroupViewController
+            vc.group = groupToView
+        }
+    }
 }
 
 extension UploadPhotoViewController: UITableViewDataSource {
@@ -63,13 +71,19 @@ extension UploadPhotoViewController: UITableViewDataSource {
     }
     
     func configure(cell: UploadPhotoCell, atIndexPath indexPath: IndexPath) {
-        cell.groupnameLabel.text = groups[indexPath.row]
+        let buttonTitle = groups[indexPath.row]
+        cell.groupNameButton.setTitle(buttonTitle, for: .normal)
     }
 }
 
 extension UploadPhotoViewController: UploadPhotoCellDelegate {
     func didTapUploadButton(_ uploadButton: UIButton, on cell: UploadPhotoCell) {
-        group = cell.groupnameLabel.text!
+        group = cell.groupNameButton.titleLabel!.text!
         photoHelper.presentActionSheet(from: self)
+    }
+    
+    func didTapGroupNameButton(_ groupNameButton: UIButton, on cell: UploadPhotoCell) {
+        groupToView = cell.groupNameButton.titleLabel!.text!
+        self.performSegue(withIdentifier: "toGroupViewController", sender: self)
     }
 }

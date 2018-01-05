@@ -10,6 +10,7 @@ import UIKit
 
 protocol UploadPhotoCellDelegate: class {
     func didTapUploadButton(_ uploadButton: UIButton, on cell: UploadPhotoCell)
+    func didTapGroupNameButton(_ groupNameButton: UIButton, on cell: UploadPhotoCell)
 }
 
 class UploadPhotoCell: UITableViewCell {
@@ -17,7 +18,7 @@ class UploadPhotoCell: UITableViewCell {
     weak var delegate: UploadPhotoCellDelegate?
 
     @IBOutlet weak var uploadButton: UIButton!
-    @IBOutlet weak var groupnameLabel: UILabel!
+    @IBOutlet weak var groupNameButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,5 +32,9 @@ class UploadPhotoCell: UITableViewCell {
     
     @IBAction func uploadButtonTapped(_ sender: UIButton) {
         delegate?.didTapUploadButton(sender, on: self)
+    }
+    
+    @IBAction func groupNameButtonTapped(_ sender: UIButton) {
+        delegate?.didTapGroupNameButton(sender, on: self)
     }
 }

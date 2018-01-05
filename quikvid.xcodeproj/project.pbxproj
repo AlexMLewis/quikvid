@@ -16,6 +16,9 @@
 		B73C96201FF177A6000CCF1E /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73C961F1FF177A6000CCF1E /* StorageReference+Post.swift */; };
 		B7685A571FF214A7007AD80D /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7685A561FF214A7007AD80D /* PostHeaderCell.swift */; };
 		B7685A591FF21889007AD80D /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7685A581FF21889007AD80D /* PostActionCell.swift */; };
+		B784F2A41FFF0C6800A10EEE /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784F2A31FFF0C6800A10EEE /* GroupViewController.swift */; };
+		B784F2A61FFF417700A10EEE /* GroupThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784F2A51FFF417700A10EEE /* GroupThumbnailCell.swift */; };
+		B784F2A81FFF46A200A10EEE /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784F2A71FFF46A200A10EEE /* GroupHeaderView.swift */; };
 		B79624DC1FEF0622003C617F /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DB1FEF0622003C617F /* FollowService.swift */; };
 		B79624DE1FEF0E37003C617F /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79624DD1FEF0E37003C617F /* FindFriends.storyboard */; };
 		B79624E01FEF0FC4003C617F /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */; };
@@ -60,6 +63,9 @@
 		B73C961F1FF177A6000CCF1E /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "quikvid/Services/StorageReference+Post.swift"; sourceTree = SOURCE_ROOT; };
 		B7685A561FF214A7007AD80D /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = quikvid/Views/PostHeaderCell.swift; sourceTree = SOURCE_ROOT; };
 		B7685A581FF21889007AD80D /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = quikvid/Views/PostActionCell.swift; sourceTree = SOURCE_ROOT; };
+		B784F2A31FFF0C6800A10EEE /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		B784F2A51FFF417700A10EEE /* GroupThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupThumbnailCell.swift; path = quikvid/Views/GroupThumbnailCell.swift; sourceTree = SOURCE_ROOT; };
+		B784F2A71FFF46A200A10EEE /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupHeaderView.swift; path = quikvid/Views/GroupHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		B79624DB1FEF0622003C617F /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = quikvid/Services/FollowService.swift; sourceTree = SOURCE_ROOT; };
 		B79624DD1FEF0E37003C617F /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = quikvid/Storyboards/FindFriends.storyboard; sourceTree = SOURCE_ROOT; };
 		B79624DF1FEF0FC4003C617F /* FindFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = quikvid/Views/FindFriendsCell.swift; sourceTree = SOURCE_ROOT; };
@@ -167,6 +173,8 @@
 				B7685A561FF214A7007AD80D /* PostHeaderCell.swift */,
 				B7685A581FF21889007AD80D /* PostActionCell.swift */,
 				B71B85B71FF30B7B00D3585E /* MakeVideoCell.swift */,
+				B784F2A51FFF417700A10EEE /* GroupThumbnailCell.swift */,
+				B784F2A71FFF46A200A10EEE /* GroupHeaderView.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -208,6 +216,7 @@
 				B7E3023E1FF053040076D0E0 /* AddMembersViewController.swift */,
 				B7057BB41FF17304006512FF /* UploadPhotoViewController.swift */,
 				B71B85B51FF2ED0300D3585E /* MakeVideoViewController.swift */,
+				B784F2A31FFF0C6800A10EEE /* GroupViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -413,13 +422,16 @@
 				CFC570EF1FE6C10800FFFC19 /* StorageService.swift in Sources */,
 				CFC570C81FE5B08100FFFC19 /* LoginViewController.swift in Sources */,
 				CFC570D61FE5D29100FFFC19 /* UserService.swift in Sources */,
+				B784F2A61FFF417700A10EEE /* GroupThumbnailCell.swift in Sources */,
 				B79624DC1FEF0622003C617F /* FollowService.swift in Sources */,
 				B79624E01FEF0FC4003C617F /* FindFriendsCell.swift in Sources */,
 				B7B06EE81FEF6258003EF950 /* CreateGroupViewController.swift in Sources */,
 				CFC570F51FE6C5CE00FFFC19 /* Post.swift in Sources */,
+				B784F2A41FFF0C6800A10EEE /* GroupViewController.swift in Sources */,
 				B73040A11FF0697B005AB9B9 /* AddMembersCell.swift in Sources */,
 				CFC570F71FE6C94400FFFC19 /* UIImage+Size.swift in Sources */,
 				CFC570E11FE6008500FFFC19 /* HomeViewController.swift in Sources */,
+				B784F2A81FFF46A200A10EEE /* GroupHeaderView.swift in Sources */,
 				B7E3023F1FF053040076D0E0 /* AddMembersViewController.swift in Sources */,
 				CFC570ED1FE6141900FFFC19 /* QVPhotoHelper.swift in Sources */,
 				B73C96201FF177A6000CCF1E /* StorageReference+Post.swift in Sources */,
