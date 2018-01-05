@@ -144,6 +144,12 @@
                         <viewLayoutGuide key="safeArea" id="vdE-C0-e2B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quikvid" id="Mt0-Oq-t8B">
+                        <barButtonItem key="leftBarButtonItem" image="btn_log_out_black" id="kvn-hu-lZO">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapLogOutButton:" destination="Abl-ay-AKU" id="784-j1-8M3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="lJN-ya-g1o">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d5j-JL-EKc">
                                 <rect key="frame" x="334" y="9.5" width="25" height="25"/>
@@ -261,6 +267,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_log_out_black" width="25" height="25"/>
         <image name="btn_options_black" width="24" height="24"/>
         <image name="btn_video_camera_black" width="25" height="25"/>
         <image name="tab_home_black" width="25" height="25"/>

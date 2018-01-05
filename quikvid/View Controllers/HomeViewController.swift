@@ -8,14 +8,14 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     var posts = [Post]()
-    
     let refreshControl = UIRefreshControl()
+    var authHandle: AuthStateDidChangeListenerHandle?
     
     let timestampFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -36,6 +36,20 @@ class HomeViewController: UIViewController {
         
         configureTableView()
         reloadTimeline()
+        
+        authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
+            guard user == nil else { return }
+            
+            let loginViewController = UIStoryboard.initialViewController(for: .login)
+            self.view.window?.rootViewController = loginViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+    }
+    
+    deinit {
+        if let authHandle = authHandle {
+            Auth.auth().removeStateDidChangeListener(authHandle)
+        }
     }
     
     @objc func reloadTimeline() {
@@ -52,6 +66,24 @@ class HomeViewController: UIViewController {
     
     @IBAction func makeVideoButtonTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "toMakeVideo", sender: self)
+    }
+    
+    @IBAction func didTapLogOutButton(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .default) {_ in
+            do {
+                try Auth.auth().signOut()
+            } catch let error as NSError {
+                assertionFailure("Error signing out: \(error.localizedDescription)")
+            }
+        }
+        alertController.addAction(signOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
 }
 
